@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col">
+            <h2>
+                {{ page.title }}
+                {% if page.cover_image %}
+                <img src="{{ page.cover_image.url}}" class="w-100" alt="">
+                <p>{{ page.convert }}</p>
+                {% endif %}
+            </h2>
+            <p>
+                {{ page.content }}
+
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
